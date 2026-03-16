@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 import pickle
 
-def generate_bev_with_mapping(ply_path, resolution=0.05, z_range=[0.1, 2.5]):
+def generate_bev_with_mapping(ply_path, resolution=0.05, z_range=[1.5, 2.0]):
     """
     生成高分辨率BEV图像并保留点到像素的映射索引
     :param ply_path: S3DIS PLY文件路径
@@ -84,12 +84,12 @@ def generate_bev_with_mapping(ply_path, resolution=0.05, z_range=[0.1, 2.5]):
 # 测试运行
 if __name__ == "__main__":
     # 请替换为你本地 S3DIS Area_2 的实际路径
-    ply_file_path = "./ply_files/S3DIS_Area2_6Classes.ply" 
+    ply_file_path = "../ply_files/S3DIS_Area2_6Classes.ply" 
     
     bev, mapping, meta = generate_bev_with_mapping(ply_file_path)
 
     # 保存结果
-    bev_folder_path="./bev_files/"
+    bev_folder_path="../bev_files/"
     png_file_path=bev_folder_path+"S3DIS_Area2_BEV.png"
     mapping_file_path=bev_folder_path+"bev_mapping.pkl"
     cv2.imwrite(png_file_path, bev)

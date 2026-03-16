@@ -145,8 +145,8 @@ def export_s3dis_area_to_ply_binary(dataset_root, area_name, output_filename):
     print(f"完成！\n点云文件: {output_filename}\n颜色配置: {xml_output}")
 
 # --- 配置路径 ---
-DATASET_ROOT = '../Stanford3dDataset_v1.2'
-OUTPUT_FILE = './ply_files/S3DIS_Area2_6Classes.ply'
+DATASET_ROOT = '../../Stanford3dDataset_v1.2'
+OUTPUT_FILE = '../ply_files/S3DIS_Area2_6Classes.ply'
 
-os.makedirs('./ply_files', exist_ok=True)
+os.makedirs('../ply_files', exist_ok=True)
 export_s3dis_area_to_ply_binary(DATASET_ROOT, 'Area_2', OUTPUT_FILE)

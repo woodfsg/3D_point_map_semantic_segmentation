@@ -89,7 +89,7 @@ def export_area_original_rgb(dataset_root, area_name, output_filename):
 
 # --- 配置路径 ---
 # 确保此路径指向包含 Area_1, Area_2... 的文件夹
-DATASET_ROOT = '../Stanford3dDataset_v1.2'
-OUTPUT_FILE = './ply_files/S3DIS_Area2_Original.ply'
+DATASET_ROOT = '../../Stanford3dDataset_v1.2'
+OUTPUT_FILE = '../ply_files/S3DIS_Area2_Original.ply'
 
 export_area_original_rgb(DATASET_ROOT, 'Area_2', OUTPUT_FILE)
